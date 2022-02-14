@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="mathCheatObject"
+		class="com.milonsheikh.diobject.MathCheat"></bean>
+
+	<bean id="stu" class="com.milonsheikh.diobject.Student">
+		<constructor-arg name="id" value="101" />
+		<constructor-arg>
+			<ref bean="mathCheatObject" />
+		</constructor-arg>
+	</bean>
+
+
+	<bean id="anotherStudent" class="com.milonsheikh.diobject.AnotherStudent">
+		<constructor-arg name="cheat">
+			<ref bean="mathCheatObject" />
+		</constructor-arg>
+	</bean>
+
+</beans>
