@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="student" class="com.milonsheikh.dicollection.Student">
+		<property name="name" value="Milon Sheikh" />
+		<property name="phones">
+			<list>
+				<value>01711111</value>
+				<value>01722222</value>
+				<value>01733333</value>
+			</list>
+		</property>
+
+		<property name="adderss">
+			<set>
+				<value>Dhaka</value>
+				<value>Khulna</value>
+				<value>Barishal</value>
+			</set>
+		</property>
+
+		<property name="courses">
+			<map>
+				<entry key="PHP" value="1 Month" />
+				<entry key="Python" value="2 Month" />
+				<entry key="Java" value="3 Month" />
+			</map>
+		</property>
+
+		<property name="props">
+			<props>
+				<prop key="PHP">1 Month</prop>
+				<prop key="Python">2 Month</prop>
+				<prop key="Java">3 Month</prop>
+			</props>
+		</property>
+	</bean>
+
+</beans>
